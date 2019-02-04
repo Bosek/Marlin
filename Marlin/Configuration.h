@@ -390,9 +390,9 @@
 
   // ANET A8 Standard Extruder at 210 Degree Celsius and 100% Fan
   //(measured after M106 S255 with M303 E0 S210 C8)
-  #define DEFAULT_Kp 35.52
-  #define DEFAULT_Ki 4.52
-  #define DEFAULT_Kd 69.84
+  #define DEFAULT_Kp 45.82
+  #define DEFAULT_Ki 6.28
+  #define DEFAULT_Kd 83.53
 
 #endif // PIDTEMP
 
@@ -776,9 +776,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 28   // X offset: -left  +right  [of the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 38   // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.6   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.7   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 20
@@ -1024,10 +1024,10 @@
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION (MIN_PROBE_EDGE)
-  #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
-  #define FRONT_PROBE_BED_POSITION (MIN_PROBE_EDGE) //EDIT THIS AFTER BETTER NOZZLE OFFSET
-  #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE - 5) //EDIT THIS AFTER BETTER NOZZLE OFFSET
+  #define LEFT_PROBE_BED_POSITION (MIN_PROBE_EDGE + 10) //EDIT THIS AFTER BETTER NOZZLE OFFSET
+  #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE - 10) //EDIT THIS AFTER BETTER NOZZLE OFFSET
+  #define FRONT_PROBE_BED_POSITION (MIN_PROBE_EDGE + 10) //EDIT THIS AFTER BETTER NOZZLE OFFSET
+  #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - MIN_PROBE_EDGE - 15) //EDIT THIS AFTER BETTER NOZZLE OFFSET
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
