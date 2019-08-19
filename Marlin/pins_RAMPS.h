@@ -71,10 +71,10 @@
 //
 #define X_MIN_PIN           3
 #ifndef X_MAX_PIN
-  #define X_MAX_PIN         2
+  #define X_MAX_PIN         3
 #endif
-#define Y_MIN_PIN          14
-#define Y_MAX_PIN          15
+#define Y_MIN_PIN          2
+#define Y_MAX_PIN          2
 #define Z_MIN_PIN          18
 #define Z_MAX_PIN          19
 
@@ -92,14 +92,14 @@
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
 #ifndef X_CS_PIN
-  #define X_CS_PIN         53
+  #define X_CS_PIN         14
 #endif
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN         49
+  #define Y_CS_PIN         15
 #endif
 
 #define Z_STEP_PIN         46
@@ -362,12 +362,12 @@
 
     #elif ENABLED(ZONESTAR_LCD)
 
-      #define LCD_PINS_RS       64
-      #define LCD_PINS_ENABLE   44
-      #define LCD_PINS_D4       63
-      #define LCD_PINS_D5       40
-      #define LCD_PINS_D6       42
-      #define LCD_PINS_D7       65
+      #define LCD_PINS_RS       25
+      #define LCD_PINS_ENABLE   16
+      #define LCD_PINS_D4       27
+      #define LCD_PINS_D5       23
+      #define LCD_PINS_D6       17
+      #define LCD_PINS_D7       37
 
     #else
 
@@ -536,7 +536,7 @@
 
     #elif ENABLED(ZONESTAR_LCD)
 
-      #define ADC_KEYPAD_PIN    12
+      #define ADC_KEYPAD_PIN    35
 
     #else
 
