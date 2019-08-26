@@ -1099,40 +1099,40 @@
 #if HAS_TRINAMIC
 
   #define R_SENSE           0.11  // R_sense resistor for SilentStepStick2130
-  #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
+  #define HOLD_MULTIPLIER    0.2  // Scales down the holding current from run current
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
-  #define X_CURRENT          800  // rms current in mA. Multiply by 1.41 for peak current.
+  #define X_CURRENT          550  // rms current in mA. Multiply by 1.41 for peak current.
   #define X_MICROSTEPS        16  // 0..256
 
-  #define Y_CURRENT          800
+  #define Y_CURRENT          700
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT          800
+  #define Z_CURRENT          450
   #define Z_MICROSTEPS        16
 
-  #define X2_CURRENT         800
+  #define X2_CURRENT         500
   #define X2_MICROSTEPS       16
 
-  #define Y2_CURRENT         800
+  #define Y2_CURRENT         500
   #define Y2_MICROSTEPS       16
 
-  #define Z2_CURRENT         800
+  #define Z2_CURRENT         450
   #define Z2_MICROSTEPS       16
 
-  #define E0_CURRENT         800
+  #define E0_CURRENT         700
   #define E0_MICROSTEPS       16
 
-  #define E1_CURRENT         800
+  #define E1_CURRENT         500
   #define E1_MICROSTEPS       16
 
-  #define E2_CURRENT         800
+  #define E2_CURRENT         500
   #define E2_MICROSTEPS       16
 
-  #define E3_CURRENT         800
+  #define E3_CURRENT         500
   #define E3_MICROSTEPS       16
 
-  #define E4_CURRENT         800
+  #define E4_CURRENT         500
   #define E4_MICROSTEPS       16
 
   /**
@@ -1176,20 +1176,19 @@
    * STEALTHCHOP needs to be enabled.
    * M913 X/Y/Z/E to live tune the setting
    */
-  //#define HYBRID_THRESHOLD
+  #define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
   #define Y_HYBRID_THRESHOLD     100
   #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD       3
-  #define Z2_HYBRID_THRESHOLD      3
-  #define E0_HYBRID_THRESHOLD     30
-  #define E1_HYBRID_THRESHOLD     30
-  #define E2_HYBRID_THRESHOLD     30
-  #define E3_HYBRID_THRESHOLD     30
-  #define E4_HYBRID_THRESHOLD     30
-
+  #define Z_HYBRID_THRESHOLD      10
+  #define Z2_HYBRID_THRESHOLD     10
+  #define E0_HYBRID_THRESHOLD      1
+  #define E1_HYBRID_THRESHOLD      1
+  #define E2_HYBRID_THRESHOLD      1
+  #define E3_HYBRID_THRESHOLD      1
+  #define E4_HYBRID_THRESHOLD      1
   /**
    * Use stallGuard2 to sense an obstacle and trigger an endstop.
    * You need to place a wire from the driver's DIAG1 pin to the X/Y endstop pin.
